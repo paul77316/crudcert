@@ -163,7 +163,7 @@ class UserController extends Controller
 		->leftJoin('users', 'certificates.user_id', '=', 'users.id')
 		->leftJoin('lessons', 'certificates.lesson_id', '=', 'lessons.id')
 		->where('certificates.user_id', $id)
-		->where('lessons.deleted_at', 0)
+		->where('lessons.deleted_at', 0) 
 		->get();
 		// $arr = [];
 		// foreach ($certificat as $key => $value) {
